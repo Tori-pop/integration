@@ -2,95 +2,98 @@
 #       Text based advanture game
 
 
-print("Hey, my name is Chris")
-name = raw_input("what's your name?\n")
-print("Nice to meet you, " + name)
-age = raw_input("I'm 13. \nHow old are you?\n")
+import games
+import sprites
+import time
+import ass
+
+
+#       Game Statistics
+coins = 0
+
+
+sprites.bunny()
+ass.dell("Hey, my name is Chris\n")
+ass.dell("what's your name?")
+name = input("\n")
+ass.dell("Nice to meet you, " + name)
+ass.dell("\nI'm 13.\n")
+time.sleep(1)
+ass.dell("How old are you?\n")
+age = input("\n")
+
 ageCal = int(age) - 13
-
-if age == 13:
-    print("Then we're the same age")
+if int(age) == 13:
+    ass.dell("Cool! W're the same age")
 else:
-    print("So we are " + str(abs(ageCal))+ " years apart")
-print("So... Do you want to go to the park or if your brave we can go somewhere cooler?")
-firstBranch = raw_input("Type 'x' if you feel brave\n")
+    ass.dell("Oh, then we are " + str(abs(ageCal)) + " years apart")
+
+time.sleep(1)
+print()
+ass.dell("Well now that we're friends I'll show you around your new town\n")
+ass.dell("and if you'er feeling brave we can go to the scariest place in town?\n")
+time.sleep(1)
+firstBranch = input("Type 'x' if you feel brave\n")
+
+
 #       This is the first story branch
+#       A1
 if firstBranch == "x" or firstBranch == "X":
-    print("Awesome then lets go to the Sunken House")
+    ass.dell("Awesome! Then we're go to the Sunken House\n")
+    time.sleep(1)
+    ass.dell("Hop on the back of my bike, \nI'll ride us there\n")
+    time.sleep(3)
+    ass.ass2()
+    sprites.house()
+    ass.dell("Here we are")
+    
+
+
+
+#       A2
 else:
-    print("Fine, we'll find something boring to do")
-    print("I say we toss a coin.")
-    flip = coinFlip()
+    ass.dell("Fine, we'll find something boring to do\n")
+    time.sleep(1)
+    ass.dell("Oh! we are going to play with the Tree Gang Kids at the old arcade\n")
+    time.sleep(2)
+    ass.dell("Hop on the back of my bike, \nI'll ride us there\n")
+    time.sleep(3)
+    ass.ass2()
+    sprites.rat1()
+    ass.dell("Hey! \nWhats up Chris? \n")
+    ass.dell("Oh, is this the new kids\n")
+    time.sleep(1)
+    sprites.bunny()
+    ass.dell("Yup, they're name is " + name)
+    ass.dell("\nDo you guys want to join the others gambling for cards,\n")
+    time.sleep(.5)
+    ass.dell("or we can play the printer game\n")
+    time.sleep(1)
+    ass.dell("I say we toss a coin\n")
+    coin = games.coinflip()
+    time.sleep(2)
 
-#       Coin Flip function
-def coinFlip():
-    coin = ('heads', 'tails')
-    flip = random.choice(coin)
-    your_choice = input("heads or tails")
-    if your_choice == flip:
-        print('It landed on {}. You win'.format(flip))
+
+#       Second story branch
+#       A2, B1
+    if coin == "heads":
+        sprites.chicken()
+        ass.dell("Hello new kid, I'm Terry\n and this is Jerry")
+        sprites.catcrouch()
+        time.sleep(1)
+        games.gambling()
+
+
+
+#       A2, B2
     else:
-        print("Uh oh. Coin landed on {}. Guess we're going to the back house".format(flip))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        sprites.rat1()
+        ass.dell("Ok follow me to the printer room")
+        sprites.rat2()
+        for x in range(10):
+            ass.dell("*\n")
+        ass.dell("This is the printer room where we play pic the pic")
+        ass.dell("The printer will print out a photo and you have to guess what it is as fast as you can")
+        start = input("type t to start playing")
+        if (start == "t" or start =="T"):
+            sprites.gpig()
