@@ -7,10 +7,8 @@ import sprites
 import time
 import ass
 
-
 #       Game Statistics
 coins = 0
-
 
 sprites.bunny()
 ass.dell("Hey, my name is Chris\n")
@@ -24,7 +22,7 @@ age = input("\n")
 
 ageCal = int(age) - 13
 if int(age) == 13:
-    ass.dell("Cool! W're the same age")
+    ass.dell("Cool! We're the same age")
 else:
     ass.dell("Oh, then we are " + str(abs(ageCal)) + " years apart")
 
@@ -35,8 +33,7 @@ ass.dell("and if you'er feeling brave we can go to the scariest place in town?\n
 time.sleep(1)
 firstBranch = input("Type 'x' if you feel brave\n")
 
-
-#       This is the first story branch
+#        first story branch
 #       A1
 if firstBranch == "x" or firstBranch == "X":
     ass.dell("Awesome! Then we're go to the Sunken House\n")
@@ -45,11 +42,22 @@ if firstBranch == "x" or firstBranch == "X":
     time.sleep(3)
     ass.ass2()
     sprites.house()
-    ass.dell("Here we are")
-    
+    ass.dell("Here we are\n")
+    theCoin1 = input("You see a coin on the ground, press x to pick it up.")
 
+#       second story branch
+#       A1  B1
+    if theCoin1 == 'x' or theCoin1 == 'X':
+        sprites.bunny()
+        ass.dell("oh wow...\n ")
+        time.sleep(1)
+        ass.dell("You know those are good luck\n")
+        ass.dell("And with a little luck we wont get wet from the storm\n")
 
-
+#       A1 B2
+    else:
+        ass.dell("Hey! Hurry up!\n")
+        ass.dell("It's supposed to rain today.\n")
 #       A2
 else:
     ass.dell("Fine, we'll find something boring to do\n")
@@ -75,25 +83,24 @@ else:
 
 
 #       Second story branch
-#       A2, B1
+#       A2, C1
     if coin == "heads":
         sprites.chicken()
         ass.dell("Hello new kid, I'm Terry\n and this is Jerry")
         sprites.catcrouch()
         time.sleep(1)
         games.gambling()
+        time.sleep(2)
+        ass.dell()
 
 
-
-#       A2, B2
+#       A2, C2
     else:
         sprites.rat1()
         ass.dell("Ok follow me to the printer room")
         sprites.rat2()
         for x in range(10):
             ass.dell("*\n")
-        ass.dell("This is the printer room where we play pic the pic")
-        ass.dell("The printer will print out a photo and you have to guess what it is as fast as you can")
-        start = input("type t to start playing")
-        if (start == "t" or start =="T"):
-            sprites.gpig()
+            ass.dell("The printer doesn't actually work, but we have a different game.\n")
+            games.memory()
+            ass.dell("damn look at that rain\n")
