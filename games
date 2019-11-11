@@ -64,31 +64,23 @@ def gambling():
             ass.dell("Damn, you're bad at guessing")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def memory():
+    n = random.randint(1, 99)
+    ass.dell("Say a number inbetween 1 to 99: ")
+    guess = input()
+    while n != "guess":
+        if guess < n:
+            ass.dell("guess is low")
+            ass.dell("different number")
+            guess = input()
+        elif guess > n:
+            ass.dell("guess is high")
+            ass.dell("what's an number from 1 to 99: ")
+            guess = input()
+        else:
+            ass.dell("Damn, took you long enough!")
+            break
+        print
 
 
 
