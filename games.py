@@ -50,13 +50,12 @@ def gambling():
     sprites.catcrouch()
     ass.text("The rules are simple\n")
     ass.text("I roll two dice and if the sum of both are equal to what you guessed then you win two coins\n")
-    ass.dell("and if one of the dice lands on your guess then you get one coin\n")
-    coi = 0
+    ass.text("and if one of the dice lands on your guess then you get one coin\n")
     rand = random.randint(1, 6)
     rand2 = random.randint(1, 6)
     number = 12
     number2 = 2
-    num = 0
+    i_num = 0
     while True:
         try:
             ass.text("Pic a number in between 2 and 12")
@@ -65,7 +64,6 @@ def gambling():
                 raise ValueTooLargeError
             elif i_num < number2:
                 raise ValueTooSmallError
-            num = i_num
             break
         except ValueTooSmallError:
             ass.text("Do you not know how to count? that's too small")
