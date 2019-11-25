@@ -1,5 +1,10 @@
-import ass
+'''
+This file holds all my sprites for the game
+author = Victoria Poplawski
+credit for pictures to: credit to https://www.asciiart.eu/animals
+'''
 
+import ass
 
 
 def frog():
@@ -33,6 +38,7 @@ def chicken():
     print("(  \_> /")
     print("\____/ ")
     print("  ^ ^")
+
 
 def snake():
     print("   _________          _________")
@@ -126,19 +132,21 @@ def micky():
 
 
 def gpig():
-    ass.dellslow("           .     .")
-    ass.dellslow("           (>\---/<)")
-    ass.dellslow("           ,'     `.")
-    ass.dellslow("          /  q   p  \ ")
-    ass.dellslow("         (  >(_Y_)<  ) ")
-    ass.dellslow("          >-' `-' `-<-.")
-    ass.dellslow("         /  _.== ==.,- \ ")
-    ass.dellslow("        /,    )`  '(    )")
-    ass.dellslow("       ; `._.'      `--<")
-    ass.dellslow("      :     \        |  )")
-    ass.dellslow("      \      )       ;_/ ")
-    ass.dellslow("       `._ _/_  ___.'-\\\ ")
-    ass.dellslow("          `--\\\ ")
+    print('''
+     .     .
+               (>\---/<)
+               ,'     `.
+              /  q   p  \ 
+             (  >(_Y_)<  ) 
+              >-' `-' `-<-.
+             /  _.== ==.,- \ 
+            /,    )`  '(    )
+           ; `._.'      `--<
+          :     \        |  )
+          \      )       ;_/ 
+           `._ _/_  ___.'-\\\ 
+              `--\\\ 
+    ''')
 
 
 def snail():
@@ -152,6 +160,7 @@ def snail():
     
     ''')
 
+
 def sheep():
     print('''
               _.-..
@@ -162,6 +171,7 @@ def sheep():
                    |//    `-,/ /
                    ]||     //  "
         ''')
+
 
 def house():
     print('''
