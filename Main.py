@@ -3,7 +3,6 @@ This file holds the main plot and possible story paths of the game
 author = Victoria Poplawski
 '''
 
-
 import games
 import sprites
 import time
@@ -42,7 +41,7 @@ if firstBranch == "x" or firstBranch == "X":
     time.sleep(1)
     ass.text("Hop on the back of my bike, \nI'll ride us there\n")
     time.sleep(3)
-    ass.ass2()
+    ass.print_ass()
     sprites.house()
     ass.text("Here we are\n")
     theCoin1 = input("You see a coin on the ground, press x to pick it up.")
@@ -68,7 +67,7 @@ else:
     time.sleep(2)
     ass.text("Hop on the back of my bike, \nI'll ride us there\n")
     time.sleep(3)
-    ass.ass2()
+    ass.print_ass()
     sprites.rat1()
     ass.text("Hey! \nWhats up Chris? \n")
     ass.text("Oh, is this the new kids\n")
@@ -93,8 +92,7 @@ else:
         time.sleep(1)
         games.gambling()
         time.sleep(2)
-        ass.text()
-
+        print()
 
     #       A2, C2
     else:
